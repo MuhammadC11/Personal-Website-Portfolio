@@ -1,68 +1,71 @@
 <template>
-  <div>
-    <svg
-      class="background--custom"
-      id="demo"
-      viewBox="0 0 100 100"
-      preserveAspectRatio="none"
-    >
-      <path
-        fill="#8ac5ee"
-        fill-opacity="0.4"
-        d="M-100 -100L200 -100L200 50L-100 50Z"
-        style="animation: path0 3.4246575342465753s linear infinite alternate"
-      />
-      <path
-        fill="#f5261f"
-        fill-opacity="0.1"
-        d="M-100 -100L200 -100L200 80L-100 80Z"
-        style="animation: path1 62.5s linear infinite alternate"
-      />
-      <path
-        fill="#6e4973"
-        fill-opacity="0.2"
-        d="M-100 -100L200 -100L200 90L-100 90Z"
-        style="animation: path2 26.31578947368421s linear infinite alternate"
-      />
-    </svg>
-  </div>
+  <section id="container">
+    <h1>Muhammad Chaudhry</h1>
+    <button>tap</button>
+  </section>
 </template>
 
 <style>
-path {
-  transform-origin: 50% 0%;
-}
-.background--custom {
-  background-color: #ffffff;
-  position: absolute;
+section {
   width: 100vw;
   height: 100vh;
-  z-index: -1;
-  top: 0;
-  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-@keyframes path0 {
-  0% {
-    transform: rotate(-20deg);
-  }
-  100% {
-    transform: rotate(20deg);
-  }
+
+section h1 {
+  color: #fff;
+  font-size: 5rem;
+  mix-blend-mode: difference;
 }
-@keyframes path1 {
-  0% {
-    transform: rotate(-20deg);
-  }
-  100% {
-    transform: rotate(20deg);
-  }
+
+button {
+  border: none;
+  outline: none;
+  padding: 0.5em 1.1em;
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
+  background-color: rgba(176, 255, 160, 0.233);
+  color: #fff;
+  backdrop-filter: blur(20px);
+  cursor: pointer;
+  border-radius: 2.5px;
+  user-select: none;
+  transition: ease-in-out 0.15s all;
 }
-@keyframes path2 {
-  0% {
-    transform: rotate(50deg);
-  }
-  100% {
-    transform: rotate(-50deg);
-  }
+
+button:hover {
+  background-color: rgba(237, 250, 227, 0.733);
+  color: #000;
+}
+
+button:active {
+  animation: click 0.15s ease-in-out;
 }
 </style>
+
+<script setup>
+import * as THREE from "three";
+import FOG from "vanta/dist/vanta.fog.min";
+window.onload = function () {
+  const effect = FOG({
+    el: "section",
+    THREE,
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.0,
+    minWidth: 200.0,
+    highlightColor: 0x9500ff,
+    midtoneColor: 0xb3a4a4,
+    lowlightColor: 0x1fff,
+    baseColor: 0x252222,
+    blurFactor: 0.55,
+    speed: 1.2,
+  });
+};
+</script>
