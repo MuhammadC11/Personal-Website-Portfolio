@@ -3,16 +3,12 @@
   <div class="navbar_container">
     <div class="home_button">
       <router-link to="/" aria-label="link to the homepage">
-        <button class="button" type="button" name="button" aria-label="home">
-          Muhammad Chaudhry
-        </button>
+        <button class="button1">Muhammad Chaudhry</button>
       </router-link>
     </div>
     <div class="resume_button">
       <router-link to="/resume" aria-label="link to resume">
-        <button class="button" type="button" name="button" aria-label="resume">
-          Résumé
-        </button>
+        <button class="button1">Résumé</button>
       </router-link>
     </div>
   </div>
@@ -32,6 +28,45 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
 @import "https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap";
 
+.button1 {
+  font-size: 18px;
+  color: #ffffff;
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+.button1:focus,
+.button1:hover {
+  color: #fff;
+}
+
+.button1:focus:after,
+.button1:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+.button1:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
 .navbar_container {
   text-align: center;
   align-items: left;
