@@ -1,5 +1,4 @@
 <template>
-  <!-- create a navbar with options for projects, and resume -->
   <div class="navbar_container">
     <div class="home_button">
       <router-link to="/" aria-label="link to the homepage">
@@ -12,14 +11,6 @@
       </router-link>
     </div>
   </div>
-  <!-- create a section for each project -->
-  <!-- create a section for resume -->
-  <!-- create a section for contact -->
-  <!-- create a footer with links to github, linkedin, and email -->
-  <!-- create a section for about me -->
-  <!-- create a section for skills -->
-  <!-- create a section for education -->
-  <!-- create a section for experience -->
 </template>
 
 <script setup></script>
