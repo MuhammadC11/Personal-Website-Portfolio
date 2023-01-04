@@ -1,9 +1,68 @@
 <template>
-  <section id="container">
-    <h1>Muhammad Chaudhry</h1>
-    <button>tap</button>
+  <section ref="vantaRef">
+    <h1 class="title">Hey! I'm Muhammad Chaudhry</h1>
   </section>
+  <div></div>
 </template>
+
+<script>
+import FOG from "vanta/dist/vanta.fog.min";
+import * as THREE from "three";
+// Make sure window.THREE is defined, e.g. by including three.min.js in the document head using a <script> tag
+
+export default {
+  mounted() {
+    this.vantaEffect = FOG({
+      el: this.$refs.vantaRef,
+      THREE,
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.0,
+      minWidth: 200.0,
+      highlightColor: 0x8aacde,
+      midtoneColor: 0xd6672,
+      lowlightColor: 0xff,
+      baseColor: 0x0,
+      blurFactor: 0.53,
+      speed: 0.4,
+      zoom: 0.2,
+    });
+  },
+  beforeDestroy() {
+    if (this.vantaEffect) {
+      this.vantaEffect.destroy();
+    }
+  },
+};
+</script>
+
+<script setup>
+// import * as THREE from "three";
+// import FOG from "vanta/dist/vanta.fog.min";
+// import { effect } from "vue";
+// function reload() {
+//   effect.resize();
+// }
+// window.onload = function () {
+//   const effect = FOG({
+//     el: "section",
+//     THREE,
+//     mouseControls: true,
+//     touchControls: true,
+//     gyroControls: false,
+//     minHeight: 200.0,
+//     minWidth: 200.0,
+//     highlightColor: 0x8aacde,
+//     midtoneColor: 0xd6672,
+//     lowlightColor: 0xff,
+//     baseColor: 0x0,
+//     blurFactor: 0.53,
+//     speed: 0.4,
+//     zoom: 0.2,
+//   });
+// };
+</script>
 
 <style>
 section {
@@ -31,7 +90,7 @@ button {
   letter-spacing: 0.02em;
   background-color: rgba(176, 255, 160, 0.233);
   color: #fff;
-  backdrop-filter: blur(20px);
+
   cursor: pointer;
   border-radius: 2.5px;
   user-select: none;
@@ -47,25 +106,3 @@ button:active {
   animation: click 0.15s ease-in-out;
 }
 </style>
-
-<script setup>
-import * as THREE from "three";
-import FOG from "vanta/dist/vanta.fog.min";
-window.onload = function () {
-  const effect = FOG({
-    el: "section",
-    THREE,
-    mouseControls: true,
-    touchControls: true,
-    gyroControls: false,
-    minHeight: 200.0,
-    minWidth: 200.0,
-    highlightColor: 0x9500ff,
-    midtoneColor: 0xb3a4a4,
-    lowlightColor: 0x1fff,
-    baseColor: 0x252222,
-    blurFactor: 0.55,
-    speed: 1.2,
-  });
-};
-</script>
