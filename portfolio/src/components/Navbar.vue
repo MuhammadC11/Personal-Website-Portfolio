@@ -25,10 +25,11 @@
 @import "https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap";
 
 .home_button {
-  width: 100%;
+  width: 50%;
+  text-align: left;
 }
 .resume_button {
-  margin-left: 90rem;
+  margin-left: 9rem;
 }
 .gh_button {
   border: none;
