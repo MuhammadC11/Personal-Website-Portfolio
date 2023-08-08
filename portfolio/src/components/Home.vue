@@ -1,6 +1,7 @@
 <template>
   <section ref="vantaRef">
-    <h1 class="title">Hey! I'm Muhammad Chaudhry, An Aspiring Software Engineer</h1>
+    <h1 class="title">Muhammad Chaudhry</h1>
+    <h1 class="title">Aspiring Software Engineer</h1>
   </section>
   <div></div>
 </template>
@@ -105,5 +106,8 @@ button:hover {
 
 button:active {
   animation: click 0.15s ease-in-out;
+}
+.title {
+  margin-top: 0;
 }
 </style>
