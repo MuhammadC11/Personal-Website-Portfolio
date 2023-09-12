@@ -67,6 +67,9 @@ export default {
 </script>
 
 <style>
+.title {
+  color: white;
+}
 section {
   width: 100vw;
   height: 100vh;
@@ -108,6 +111,6 @@ button:active {
   animation: click 0.15s ease-in-out;
 }
 .title {
-  margin-top: 0;
+  margin-top: 1rem;
 }
 </style>

@@ -29,7 +29,7 @@
   text-align: left;
 }
 .resume_button {
-  margin-left: 9rem;
+  margin-left: 30rem;
 }
 .gh_button {
   border: none;
