@@ -6,9 +6,7 @@
       </router-link>
     </div>
     <div class="resume_button">
-      <router-link to="/resume" aria-label="link to resume">
-        <button class="button1">Résumé</button>
-      </router-link>
+      <button class="button1" @click="openResume">Résumé</button>
     </div>
     <div>
       <a target="_blank" class="gh_button" href="https://github.com/MuhammadC11"
@@ -18,7 +16,15 @@
   </div>
 </template>
 
-<script setup></script>
+<script>
+export default {
+  methods: {
+    openResume() {
+      window.open("path_to_your_resume.pdf", "_blank");
+    },
+  },
+};
+</script>
 
 <style scoped>
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
@@ -29,8 +35,14 @@
   text-align: left;
 }
 .resume_button {
-  margin-left: 30rem;
+  margin-left: 65rem;
 }
+@media (max-width: 1920px) {
+  .resume_button {
+    margin-left: 45rem;
+  }
+}
+
 .gh_button {
   border: none;
   outline: none;
@@ -39,7 +51,6 @@
   letter-spacing: 0.02em;
   background-color: rgba(176, 255, 160, 0.233);
   color: #fff;
-
   cursor: pointer;
   border-radius: 2.5px;
   user-select: none;

@@ -1,7 +1,7 @@
 <template>
   <section ref="vantaRef">
-    <h1 class="title">Muhammad Chaudhry</h1>
-    <h1 class="title">Aspiring Software Engineer</h1>
+    <h1 class="title">Hello, I'm Muhammad Chaudhry</h1>
+    <h1 class="title">An Aspiring Software Engineer</h1>
   </section>
   <div></div>
 </template>
@@ -28,7 +28,7 @@ export default {
       blurFactor: 0.53,
       speed: 0.4,
       zoom: 0.2,
-      framerate: 10,
+      framerate: 60,
     });
   },
   beforeDestroy() {
