@@ -20,7 +20,7 @@
 export default {
   methods: {
     openResume() {
-      window.open("path_to_your_resume.pdf", "_blank");
+      window.open("/Resume.pdf", "_blank");
     },
   },
 };
