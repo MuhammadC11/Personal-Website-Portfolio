@@ -37,9 +37,40 @@ export default {
 .resume_button {
   margin-left: 65rem;
 }
-@media (max-width: 1920px) {
+@media screen and (max-width: 1920px) {
   .resume_button {
     margin-left: 45rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .resume_button {
+    margin-left: 20rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .resume_button {
+    margin-left: 2rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  .resume_button {
+    margin-left: 0rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .resume_button {
+    margin-left: 0rem;
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .resume_button {
+    margin-left: 0rem;
+  }
+}
+@media screen and (max-width: 280px) {
+  .resume_button {
+    margin-left: 0rem;
   }
 }
 

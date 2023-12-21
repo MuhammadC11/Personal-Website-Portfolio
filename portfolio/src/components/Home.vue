@@ -70,6 +70,41 @@ export default {
 .title {
   color: white;
 }
+@media screen and (max-width: 1920px) {
+  .title {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .title {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .title {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .title {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 280px) {
+  .title {
+    font-size: 1rem;
+  }
+}
 section {
   width: 100vw;
   height: 100vh;
