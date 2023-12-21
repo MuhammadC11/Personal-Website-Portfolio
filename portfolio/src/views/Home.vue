@@ -1,10 +1,5 @@
 <template>
-  <div class="container">
-    <div>
-      <Home />
-    </div>
-    <router-view />
-  </div>
+  <Home />
 </template>
 
 <script setup>
