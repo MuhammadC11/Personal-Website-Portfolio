@@ -1,5 +1,5 @@
 <template>
-  <section class="project_section">
+  <section class="project_section" ref="vantaRef">
     <div class="project-card" v-for="project in projects" :key="project.id">
       <div class="project-card__side project-card__side--front">
         <div
@@ -55,47 +55,81 @@
       ></iframe> -->
 </template>
 
-<script setup>
-const projects = [
-  {
-    id: 1,
-    title: "Lowballd",
-    description:
-      "Lowballd is a fullstack social media platform for sharing and selling outfits of the day. We used NodeJS, MongoDB, Vue and Auth0 for the application.",
-    link: "https://www.lowballd.com",
-    technologies: ["NodeJS", "MongoDB", "Vue", "Auth0"],
-    image_url: "/lowballd.png",
-    route: "/lowballd",
+<script>
+import FOG from "vanta/dist/vanta.fog.min";
+import * as THREE from "three";
+
+export default {
+  data() {
+    return {
+      projects: [
+        {
+          id: 1,
+          title: "Lowballd",
+          description:
+            "Lowballd is a fullstack social media platform for sharing and selling outfits of the day. We used NodeJS, MongoDB, Vue and Auth0 for the application.",
+          link: "https://www.lowballd.com",
+          technologies: ["NodeJS", "MongoDB", "Vue", "Auth0"],
+          image_url: "/lowballd.png",
+          route: "/lowballd",
+        },
+        {
+          id: 2,
+          title: "Swim Workout Generator",
+          description:
+            "We created this project during HackPrinceton Spring of 2023. We used Vue.js, Node.js, and Firebase to create a web application that generates swim workouts for users based on the user's input.",
+          link: "https://swimworkoutgenerator.netlify.app/",
+          technologies: ["Vue.js", "Node.js", "Firebase"],
+          image_url: "/swg.png",
+          route: "/swg",
+        },
+      ],
+      vantaEffect: null,
+    };
   },
-  {
-    id: 2,
-    title: "Swim Workout Generator",
-    description:
-      "We created this project during HackPrinceton Spring of 2023. We used Vue.js, Node.js, and Firebase to create a web application that generates swim workouts for users based on the user's input.",
-    link: "https://swimworkoutgenerator.netlify.app/",
-    technologies: ["Vue.js", "Node.js", "Firebase"],
-    image_url: "/swg.png",
-    route: "/swg",
+  mounted() {
+    this.vantaEffect = FOG({
+      el: this.$refs.vantaRef,
+      THREE,
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.0,
+      minWidth: 200.0,
+      highlightColor: 0x8a8ade,
+      midtoneColor: 0x22d98,
+      lowlightColor: 0x0,
+      baseColor: 0x0,
+      blurFactor: 0.22,
+      speed: 0.4,
+      zoom: 0.3,
+      framerate: 60,
+    });
   },
-];
+  beforeDestroy() {
+    if (this.vantaEffect) {
+      this.vantaEffect.destroy();
+    }
+  },
+};
 </script>
 
 <style>
 .project_section {
-  background-color: #13194e;
+  /* background-color: #13194e;
   background-image: radial-gradient(
       at 47% 33%,
       hsl(163.02, 85%, 53%) 0,
       transparent 59%
     ),
-    radial-gradient(at 82% 65%, hsl(217.8, 88%, 45%) 0, transparent 55%);
+    radial-gradient(at 82% 65%, hsl(217.8, 88%, 45%) 0, transparent 55%); */
 
   color: white;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: #00106c;
+  /* background-color: #00106c; */
   height: 100vh;
   width: 100vw;
 }
