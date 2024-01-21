@@ -127,6 +127,12 @@ const projects = [
   -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 }
 
+@media screen and (max-width: 1600px) {
+  .project-card__side {
+    height: 45rem;
+  }
+}
+
 .project-card__side--front {
   background-color: #20286c;
 }
