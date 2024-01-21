@@ -1,11 +1,9 @@
 <template>
   <section class="project_section">
-    <div class="project-card" v-for="(project, index) in projects" :key="index">
+    <div class="project-card" v-for="project in projects" :key="project.id">
       <div class="project-card__side project-card__side--front">
         <div
-          class="project-card__picture project-card__picture--1"
-          v-for="project in projects"
-          :key="project.id"
+          class="project-card__picture"
           :style="{ backgroundImage: `url(${project.image_url})` }"
         >
           &nbsp;
@@ -32,15 +30,16 @@
         class="project-card__side project-card__side--back project-card__side--back-1"
       >
         <div class="project-card__cta">
-          <div class="project-card__price-box">
-            <div class="project-card__price-value">
-              <h1>{{ project.title }}</h1>
+          <div class="project-card__description_box">
+            <div>
+              <h1 class="project-card__title">{{ project.title }}</h1>
             </div>
+            <p class="project-card__description">
+              {{ project.description }}
+            </p>
           </div>
-          <!-- <p class="project-card__price-only">
-            {{ project.description }}
-          </p> -->
-          <router-link to="/lowballd" class="btn btn--white"
+
+          <router-link :to="project.route" class="btn btn--white"
             >Check it out!</router-link
           >
         </div>
@@ -59,20 +58,24 @@
 <script setup>
 const projects = [
   {
+    id: 1,
     title: "Lowballd",
     description:
       "Lowballd is a fullstack social media platform for sharing and selling outfits of the day. We used NodeJS, MongoDB, Vue and Auth0 for the application.",
     link: "https://www.lowballd.com",
     technologies: ["NodeJS", "MongoDB", "Vue", "Auth0"],
     image_url: "/lowballd.png",
+    route: "/lowballd",
   },
   {
+    id: 2,
     title: "Swim Workout Generator",
     description:
       "We created this project during HackPrinceton Spring of 2023. We used Vue.js, Node.js, and Firebase to create a web application that generates swim workouts for users based on the user's input.",
     link: "https://swimworkoutgenerator.netlify.app/",
     technologies: ["Vue.js", "Node.js", "Firebase"],
     image_url: "/swg.png",
+    route: "/swg",
   },
 ];
 </script>
@@ -144,7 +147,7 @@ const projects = [
 
 .project-card__picture {
   background-size: cover;
-  height: 23rem;
+  height: 30rem;
   background-blend-mode: screen;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
@@ -165,9 +168,10 @@ const projects = [
   font-weight: 300;
   text-transform: uppercase;
   text-align: center;
+  justify-content: center;
   color: #fff;
   position: absolute;
-  top: 15rem;
+  top: 20rem;
   right: 2rem;
   width: 75%;
 }
@@ -187,12 +191,16 @@ const projects = [
 }
 
 .project-card__details {
-  padding: 5rem;
+  padding-top: 5rem;
 }
 
 .project-card__details ul {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
   list-style: none;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -207,8 +215,24 @@ const projects = [
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90%;
+  width: 100%;
   text-align: center;
+}
+
+.project-card__description_box {
+  padding: 1rem;
+  margin-bottom: 3rem;
+  border-radius: 3px;
+}
+
+.project-card__title {
+  font-size: 3rem;
+}
+
+.project-card__description {
+  font-size: 1.5rem;
+  color: #fff;
+  line-height: 2.5rem;
 }
 
 .btn:link,
