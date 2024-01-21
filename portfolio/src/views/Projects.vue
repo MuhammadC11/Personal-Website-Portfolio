@@ -39,8 +39,8 @@
             </p>
           </div>
 
-          <router-link :to="project.route" class="btn btn--white"
-            >Check it out!</router-link
+          <a :href="project.link" target="_blank" class="btn btn--white"
+            >Check it out!</a
           >
         </div>
       </div>
