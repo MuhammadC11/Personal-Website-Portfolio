@@ -5,9 +5,15 @@
         <button class="button1">Muhammad Chaudhry</button>
       </router-link>
     </div>
+    <div class="projects_button">
+      <router-link to="/projects" aria-label="link to the projects page">
+        <button class="button1">Projects</button>
+      </router-link>
+    </div>
     <div class="resume_button">
       <button class="button1" @click="openResume">Résumé</button>
     </div>
+
     <div>
       <a target="_blank" class="gh_button" href="https://github.com/MuhammadC11"
         >GitHub</a
@@ -34,42 +40,42 @@ export default {
   width: 50%;
   text-align: left;
 }
-.resume_button {
+.projects_button {
   margin-left: 65rem;
 }
 @media screen and (max-width: 1920px) {
-  .resume_button {
+  .projects_button {
     margin-left: 45rem;
   }
 }
 @media screen and (max-width: 1100px) {
-  .resume_button {
+  .projects_button {
     margin-left: 20rem;
   }
 }
 @media screen and (max-width: 768px) {
-  .resume_button {
+  .projects_button {
     margin-left: 2rem;
   }
 }
 @media screen and (max-width: 425px) {
-  .resume_button {
+  .projects_button {
     margin-left: 0rem;
   }
 }
 @media screen and (max-width: 375px) {
-  .resume_button {
+  .projects_button {
     margin-left: 0rem;
     font-size: 1rem;
   }
 }
 @media screen and (max-width: 320px) {
-  .resume_button {
+  .projects_button {
     margin-left: 0rem;
   }
 }
 @media screen and (max-width: 280px) {
-  .resume_button {
+  .projects_button {
     margin-left: 0rem;
   }
 }
