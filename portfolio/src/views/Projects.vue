@@ -82,6 +82,14 @@ const projects = [
 
 <style>
 .project_section {
+  background-color: #13194e;
+  background-image: radial-gradient(
+      at 47% 33%,
+      hsl(163.02, 85%, 53%) 0,
+      transparent 59%
+    ),
+    radial-gradient(at 82% 65%, hsl(217.8, 88%, 45%) 0, transparent 55%);
+
   color: white;
   display: flex;
   flex-direction: row;
