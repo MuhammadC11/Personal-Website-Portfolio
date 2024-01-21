@@ -3,7 +3,6 @@
     <h1 class="title">Hello, I'm Muhammad Chaudhry</h1>
     <h1 class="title">An Aspiring Software Engineer</h1>
   </section>
-  <div></div>
 </template>
 
 <script>
