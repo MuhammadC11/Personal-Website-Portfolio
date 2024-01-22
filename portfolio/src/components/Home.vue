@@ -2,6 +2,7 @@
   <section ref="vantaRef">
     <h1 class="title">Hello, I'm Muhammad Chaudhry</h1>
     <h1 class="title">An Aspiring Software Engineer</h1>
+    <button @click="scrollToAboutMe">About Me</button>
   </section>
 </template>
 
@@ -34,6 +35,12 @@ export default {
     if (this.vantaEffect) {
       this.vantaEffect.destroy();
     }
+  },
+  methods: {
+    scrollToAboutMe() {
+      const aboutMeElement = document.querySelector("#about_me");
+      aboutMeElement.scrollIntoView({ behavior: "smooth" });
+    },
   },
 };
 </script>
@@ -68,6 +75,7 @@ export default {
 <style>
 .title {
   color: white;
+  font-family: "Quicksand", sans-serif;
 }
 @media screen and (max-width: 1920px) {
   .title {

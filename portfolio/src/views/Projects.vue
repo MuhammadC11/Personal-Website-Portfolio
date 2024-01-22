@@ -1,6 +1,11 @@
 <template>
   <section class="project_section">
-    <div class="project-card" v-for="project in projects" :key="project.id">
+    <div
+      class="project-card"
+      v-for="project in projects"
+      :key="project.id"
+      data-aos="zoom-in"
+    >
       <div class="project-card__side project-card__side--front">
         <div
           class="project-card__picture"
@@ -55,29 +60,53 @@
       ></iframe> -->
 </template>
 
-<script setup>
-const projects = [
-  {
-    id: 1,
-    title: "Lowballd",
-    description:
-      "Lowballd is a fullstack social media platform for sharing and selling outfits of the day. We used NodeJS, MongoDB, Vue and Auth0 for the application.",
-    link: "https://www.lowballd.com",
-    technologies: ["NodeJS", "MongoDB", "Vue", "Auth0"],
-    image_url: "/lowballd.png",
-    route: "/lowballd",
+<script>
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+export default {
+  data() {
+    return {
+      projects: [
+        {
+          id: 1,
+          title: "Lowballd",
+          description:
+            "Lowballd is a fullstack social media platform for sharing and selling outfits of the day. We used NodeJS, MongoDB, Vue and Auth0 for the application.",
+          link: "https://www.lowballd.com",
+          technologies: ["NodeJS", "MongoDB", "Vue", "Auth0"],
+          image_url: "/lowballd.png",
+          route: "/lowballd",
+        },
+        {
+          id: 2,
+          title: "Swim Workout Generator",
+          description:
+            "We created this project during HackPrinceton Spring of 2023. We used Vue.js, Node.js, and Firebase to create a web application that generates swim workouts for users based on the user's input.",
+          link: "https://swimworkoutgenerator.netlify.app/",
+          technologies: ["Vue.js", "Node.js", "Firebase"],
+          image_url: "/swg.png",
+          route: "/swg",
+        },
+        {
+          id: 3,
+          title: "Anchor",
+          description:
+            "Worked together in a team of 4 to create an extension geared towards productivity during a 36 hour hackathon. We utilized OpenAI's API to send requests based on user input to help students with their tasks.",
+          link: "https://devpost.com/software/anchor-n81947",
+          technologies: ["JavaScript", "HTML/CSS", "OpenAI API"],
+          image_url: "/anchor.jpg",
+          route: "/anchor",
+        },
+      ],
+    };
   },
-  {
-    id: 2,
-    title: "Swim Workout Generator",
-    description:
-      "We created this project during HackPrinceton Spring of 2023. We used Vue.js, Node.js, and Firebase to create a web application that generates swim workouts for users based on the user's input.",
-    link: "https://swimworkoutgenerator.netlify.app/",
-    technologies: ["Vue.js", "Node.js", "Firebase"],
-    image_url: "/swg.png",
-    route: "/swg",
+  mounted() {
+    AOS.init({
+      duration: 1000,
+    });
   },
-];
+};
 </script>
 
 <style>
@@ -98,6 +127,7 @@ const projects = [
   background-color: #00106c;
   height: 100vh;
   width: 100vw;
+  font-family: "Quicksand", sans-serif;
 }
 
 .project-card {
@@ -114,7 +144,7 @@ const projects = [
 
 .project-card__side {
   height: 52rem;
-  transition: all 0.8s ease;
+  transition: all 0.5s ease;
   position: absolute;
   top: 2rem;
   left: 0;
@@ -127,7 +157,7 @@ const projects = [
   -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1920px) {
   .project-card__side {
     height: 45rem;
   }
@@ -163,8 +193,8 @@ const projects = [
   background-size: cover;
   height: 30rem;
   background-blend-mode: screen;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
@@ -181,27 +211,29 @@ const projects = [
   font-size: 2.8rem;
   font-weight: 300;
   text-transform: uppercase;
+  text-decoration: underline;
   text-align: center;
   justify-content: center;
   color: #fff;
   position: absolute;
-  top: 20rem;
+  top: 25rem;
   right: 2rem;
   width: 75%;
 }
 
 .project-card__heading-span {
-  padding: 0.5rem 1.5rem;
+  margin: auto;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
+  border-radius: 0.5rem;
 }
 
 .project-card__heading-span--1 {
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to right bottom,
-    rgba(10, 80, 141, 0.8),
-    rgba(23, 71, 113, 0.8)
-  );
+    rgba(10, 80, 141, 0.89),
+    rgba(23, 71, 113, 0.896)
+  ); */
 }
 
 .project-card__details {
@@ -209,13 +241,13 @@ const projects = [
 }
 
 .project-card__details ul {
-  justify-content: center;
-  align-items: center;
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
   list-style: none;
   width: 100%;
-  margin: 0 auto;
+  margin: auto;
+  padding-left: 0rem;
 }
 
 .project-card__details ul li {

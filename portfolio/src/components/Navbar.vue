@@ -189,6 +189,7 @@ export default {
   background-color: #ffffff00;
   position: fixed;
   z-index: 8;
+  font-family: "Quicksand", sans-serif;
 }
 .about_button {
   display: flex;
@@ -202,8 +203,7 @@ export default {
   color: #ffffff;
   cursor: pointer;
   display: inline-block;
-  font-family: "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol";
+
   font-size: 16px;
   font-weight: 600;
   line-height: normal;
