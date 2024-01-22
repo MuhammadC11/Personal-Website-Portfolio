@@ -11,7 +11,7 @@
       </router-link>
     </div>
     <div class="resume_button">
-      <button class="button1" @click="openResume">Résumé</button>
+      <button class="button1" @click="openResume">Resumé</button>
     </div>
 
     <div>

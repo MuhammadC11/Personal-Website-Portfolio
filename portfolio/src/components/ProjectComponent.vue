@@ -367,7 +367,7 @@ body {
   }
 
   .project-card__details {
-    padding-top: 10rem;
+    padding-top: 7rem;
   }
   .project-card__details ul {
     width: 90%;
