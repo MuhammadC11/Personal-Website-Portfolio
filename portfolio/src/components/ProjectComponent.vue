@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <section class="project_section">
+    <section class="project_section" ref="vantaRef">
       <div
         class="project-card"
         v-for="project in projects"
@@ -65,6 +65,8 @@
 <script>
 import AOS from "aos";
 import "aos/dist/aos.css";
+import FOG from "vanta/dist/vanta.fog.min";
+import * as THREE from "three";
 
 export default {
   data() {
@@ -117,6 +119,28 @@ export default {
     AOS.init({
       duration: 1000,
     });
+    this.vantaEffect = FOG({
+      el: this.$refs.vantaRef,
+      THREE,
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.0,
+      minWidth: 200.0,
+      highlightColor: 0x8a8ade,
+      midtoneColor: 0x22d98,
+      lowlightColor: 0x0,
+      baseColor: 0x0,
+      blurFactor: 0.22,
+      speed: 0.4,
+      zoom: 0.3,
+      framerate: 60,
+    });
+  },
+  beforeDestroy() {
+    if (this.vantaEffect) {
+      this.vantaEffect.destroy();
+    }
   },
 };
 </script>
@@ -126,13 +150,6 @@ body {
   background-color: #111927;
 }
 .project_section {
-  background-image: radial-gradient(
-      at 47% 33%,
-      hsl(224.93, 97%, 46%) 0,
-      transparent 59%
-    ),
-    radial-gradient(at 82% 65%, hsl(218, 39%, 11%) 0, transparent 55%);
-
   color: white;
   display: flex;
   flex-direction: row;
