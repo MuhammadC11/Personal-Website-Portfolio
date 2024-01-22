@@ -1,63 +1,65 @@
 <template>
-  <section class="project_section">
-    <div
-      class="project-card"
-      v-for="project in projects"
-      :key="project.id"
-      data-aos="zoom-in"
-    >
-      <div class="project-card__side project-card__side--front">
-        <div
-          class="project-card__picture"
-          :style="{ backgroundImage: `url(${project.image_url})` }"
-        >
-          &nbsp;
-        </div>
-
-        <div class="project-card__details">
-          <ul>
-            <li
-              v-for="(tech, techIndex) in project.technologies"
-              :key="techIndex"
-            >
-              {{ tech }}
-            </li>
-          </ul>
-        </div>
-        <h4 class="project-card__heading">
-          <span
-            class="project-card__heading-span project-card__heading-span--1"
-            >{{ project.title }}</span
-          >
-        </h4>
-      </div>
+  <div class="container">
+    <section class="project_section">
       <div
-        class="project-card__side project-card__side--back project-card__side--back-1"
+        class="project-card"
+        v-for="project in projects"
+        :key="project.id"
+        data-aos="zoom-in"
       >
-        <div class="project-card__cta">
-          <div class="project-card__description_box">
-            <div>
-              <h1 class="project-card__title">{{ project.title }}</h1>
-            </div>
-            <p class="project-card__description">
-              {{ project.description }}
-            </p>
+        <div class="project-card__side project-card__side--front">
+          <div
+            class="project-card__picture"
+            :style="{ backgroundImage: `url(${project.image_url})` }"
+          >
+            &nbsp;
           </div>
 
-          <a :href="project.link" target="_blank" class="btn btn--white"
-            >Check it out!</a
-          >
+          <div class="project-card__details">
+            <ul>
+              <li
+                v-for="(tech, techIndex) in project.technologies"
+                :key="techIndex"
+              >
+                {{ tech }}
+              </li>
+            </ul>
+          </div>
+          <h4 class="project-card__heading">
+            <span
+              class="project-card__heading-span project-card__heading-span--1"
+              >{{ project.title }}</span
+            >
+          </h4>
+        </div>
+        <div
+          class="project-card__side project-card__side--back project-card__side--back-1"
+        >
+          <div class="project-card__cta">
+            <div class="project-card__description_box">
+              <div>
+                <h1 class="project-card__title">{{ project.title }}</h1>
+              </div>
+              <p class="project-card__description">
+                {{ project.description }}
+              </p>
+            </div>
+
+            <a :href="project.link" target="_blank" class="btn btn--white"
+              >Check it out!</a
+            >
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- <iframe
+    <!-- <iframe
           src="https://www.lowballd.com"
           width="800"
           height="600"
           style="border: 0"
         ></iframe> -->
+  </div>
 </template>
 
 <script>
@@ -120,8 +122,10 @@ export default {
 </script>
 
 <style>
-.project_section {
+body {
   background-color: #111927;
+}
+.project_section {
   background-image: radial-gradient(
       at 47% 33%,
       hsl(224.93, 97%, 46%) 0,
@@ -135,9 +139,7 @@ export default {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  background-color: #00106c;
-  height: 100vh;
-  width: 100vw;
+
   font-family: "Quicksand", sans-serif;
 }
 
@@ -157,7 +159,7 @@ export default {
   height: 52rem;
   transition: all 0.5s ease;
   position: absolute;
-  top: 2rem;
+  top: 0rem;
   left: 0;
   width: 100%;
   backface-visibility: hidden;
@@ -249,6 +251,7 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   list-style: none;
   width: 100%;
   margin: auto;
@@ -341,11 +344,18 @@ export default {
 }
 
 @media screen and (max-width: 1920px) {
+  .project_section {
+    margin-bottom: 5rem;
+  }
   .project-card__side {
     height: 45rem;
+    top: 4rem;
   }
   .project-card {
     width: 25rem;
+  }
+
+  .project-card__side {
   }
   .project-card__picture {
     height: 25rem;
@@ -358,6 +368,9 @@ export default {
 
   .project-card__details {
     padding-top: 10rem;
+  }
+  .project-card__details ul {
+    width: 90%;
   }
 }
 @keyframes moveInBottom {
@@ -381,24 +394,6 @@ export default {
   }
   100% {
     transform: scale(1);
-  }
-}
-
-@media only screen and (max-width: 56.25em) {
-  .project-card {
-    width: 40rem;
-  }
-}
-
-@media only screen and (max-width: 37.5em) {
-  .project-card {
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 56.25em) {
-  .project-card__heading {
-    font-size: 2rem;
   }
 }
 </style>
