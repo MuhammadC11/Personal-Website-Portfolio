@@ -111,13 +111,13 @@ export default {
 
 <style>
 .project_section {
-  background-color: #13194e;
+  background-color: #111927;
   background-image: radial-gradient(
       at 47% 33%,
-      hsl(163.02, 85%, 53%) 0,
+      hsl(224.93, 97%, 46%) 0,
       transparent 59%
     ),
-    radial-gradient(at 82% 65%, hsl(217.8, 88%, 45%) 0, transparent 55%);
+    radial-gradient(at 82% 65%, hsl(218, 39%, 11%) 0, transparent 55%);
 
   color: white;
   display: flex;
