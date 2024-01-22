@@ -82,7 +82,7 @@ export default {
         },
         {
           id: 2,
-          title: "Swim Workout Generator",
+          title: "Swim Workouts",
           description:
             "We created this project during HackPrinceton Spring of 2023. We used Vue.js, Node.js, and Firebase to create a web application that generates swim workouts for users based on the user's input.",
           link: "https://swimworkoutgenerator.netlify.app/",
