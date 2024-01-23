@@ -217,8 +217,7 @@ body {
 .project-card__heading {
   font-size: 2.8rem;
   font-weight: 300;
-  text-transform: uppercase;
-  text-decoration: underline;
+
   text-align: center;
   justify-content: center;
   color: #fff;
