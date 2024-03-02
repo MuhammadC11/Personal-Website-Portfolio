@@ -1,7 +1,7 @@
 <template>
   <section ref="vantaRef">
-    <h1 class="title">Hello, I'm Muhammad Chaudhry</h1>
-    <h1 class="title">An Aspiring Software Engineer</h1>
+    <h1 class="title">Hey, I'm Muhammad Chaudhry</h1>
+    <h1 class="title">A Software Engineer</h1>
     <button @click="scrollToAboutMe">About Me</button>
   </section>
 </template>
@@ -43,33 +43,6 @@ export default {
     },
   },
 };
-</script>
-
-<script setup>
-// import * as THREE from "three";
-// import FOG from "vanta/dist/vanta.fog.min";
-// import { effect } from "vue";
-// function reload() {
-//   effect.resize();
-// }
-// window.onload = function () {
-//   const effect = FOG({
-//     el: "section",
-//     THREE,
-//     mouseControls: true,
-//     touchControls: true,
-//     gyroControls: false,
-//     minHeight: 200.0,
-//     minWidth: 200.0,
-//     highlightColor: 0x8aacde,
-//     midtoneColor: 0xd6672,
-//     lowlightColor: 0xff,
-//     baseColor: 0x0,
-//     blurFactor: 0.53,
-//     speed: 0.4,
-//     zoom: 0.2,
-//   });
-// };
 </script>
 
 <style>
@@ -126,7 +99,7 @@ section {
 section h1 {
   color: #fff;
   font-size: 5rem;
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
 }
 
 button {

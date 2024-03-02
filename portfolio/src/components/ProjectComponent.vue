@@ -72,10 +72,27 @@ export default {
       projects: [
         {
           id: 1,
+          title: "PillPal",
+          description:
+            "PillPal is an app dedicated to users who have trouble understanding their medications and need to keep track of their prescriptions. Users can upload a photo from their camera roll or take a picture of their prescription and PillPal will provide them with information about their medication.",
+          link: "https://devpost.com/software/pillpal-airu2d",
+          technologies: [
+            "NodeJS",
+            "MongoDB",
+            "React Native",
+            "Express.js",
+            "Google Cloud API's",
+            "OpenAI API",
+          ],
+          image_url: "/pillpal.png",
+          route: "/pillpal",
+        },
+        {
+          id: 2,
           title: "Lowballd",
           description:
             "Lowballd is a fullstack social media platform for sharing and selling outfits of the day. We used NodeJS, MongoDB, Vue and Auth0 for the application.",
-          link: "https://www.lowballd.com",
+          link: "https://lowballd.netlify.app/",
           technologies: ["NodeJS", "MongoDB", "Vue", "Auth0"],
           image_url: "/lowballd.png",
           route: "/lowballd",
