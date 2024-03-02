@@ -1,7 +1,16 @@
 <template>
   <section ref="vantaRef">
-    <h1 class="title">Hey, I'm Muhammad Chaudhry</h1>
-    <h1 class="title">A Software Engineer</h1>
+    <div
+      class="title"
+      :data-type="JSON.stringify(toRotate)"
+      :data-period="period"
+    >
+      <span class="wrap"
+        >Hey, I'm Muhammad Chaudhry <br />
+        a {{ txt }}</span
+      >
+    </div>
+
     <button @click="scrollToAboutMe">About Me</button>
   </section>
 </template>
@@ -12,6 +21,20 @@ import * as THREE from "three";
 // Make sure window.THREE is defined, e.g. by including three.min.js in the document head using a <script> tag
 
 export default {
+  data() {
+    return {
+      toRotate: [
+        "Software Engineer",
+        "Computer Scientist",
+        "Full-Stack Developer",
+        "Leader",
+      ], // replace with your own text
+      period: 2000,
+      loopNum: 0,
+      txt: "",
+      isDeleting: false,
+    };
+  },
   mounted() {
     this.vantaEffect = FOG({
       el: this.$refs.vantaRef,
@@ -36,10 +59,42 @@ export default {
       this.vantaEffect.destroy();
     }
   },
+  created() {
+    this.tick();
+  },
   methods: {
     scrollToAboutMe() {
       const aboutMeElement = document.querySelector("#about_me");
       aboutMeElement.scrollIntoView({ behavior: "smooth" });
+    },
+    tick() {
+      const i = this.loopNum % this.toRotate.length;
+      const fullTxt = this.toRotate[i];
+
+      if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+      } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+      }
+
+      let delta = 200 - Math.random() * 100;
+
+      if (this.isDeleting) {
+        delta /= 2;
+      }
+
+      if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+      } else if (this.isDeleting && this.txt === "") {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+      }
+
+      setTimeout(() => {
+        this.tick();
+      }, delta);
     },
   },
 };
@@ -49,6 +104,24 @@ export default {
 .title {
   color: white;
   font-family: "Quicksand", sans-serif;
+}
+
+.wrap::after {
+  content: "|";
+  opacity: 1;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @media screen and (max-width: 1920px) {
   .title {
