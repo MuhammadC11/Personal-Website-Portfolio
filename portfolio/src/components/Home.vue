@@ -27,7 +27,10 @@ export default {
         "Software Engineer",
         "Computer Scientist",
         "Full-Stack Developer",
+        "Problem Solver",
         "Leader",
+        "Gamer",
+        "Tech Enthusiast",
       ], // replace with your own text
       period: 2000,
       loopNum: 0,
@@ -104,6 +107,7 @@ export default {
 .title {
   color: white;
   font-family: "Quicksand", sans-serif;
+  margin-top: 1rem;
 }
 
 .wrap::after {
@@ -123,41 +127,7 @@ export default {
     opacity: 1;
   }
 }
-@media screen and (max-width: 1920px) {
-  .title {
-    font-size: 4rem;
-  }
-}
-@media screen and (max-width: 1100px) {
-  .title {
-    font-size: 3rem;
-  }
-}
-@media screen and (max-width: 768px) {
-  .title {
-    font-size: 2rem;
-  }
-}
-@media screen and (max-width: 425px) {
-  .title {
-    font-size: 2rem;
-  }
-}
-@media screen and (max-width: 375px) {
-  .title {
-    font-size: 1.5rem;
-  }
-}
-@media screen and (max-width: 320px) {
-  .title {
-    font-size: 1.5rem;
-  }
-}
-@media screen and (max-width: 280px) {
-  .title {
-    font-size: 1rem;
-  }
-}
+
 section {
   width: 100vw;
   height: 100vh;
@@ -220,7 +190,46 @@ button:hover {
 button:active {
   animation: click 0.15s ease-in-out;
 }
-.title {
-  margin-top: 1rem;
+
+@media screen and (max-width: 1920px) {
+  .title {
+    font-size: 4rem;
+  }
+
+  #about_button {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    top: 15rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .title {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .title {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .title {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 280px) {
+  .title {
+    font-size: 1rem;
+  }
 }
 </style>
