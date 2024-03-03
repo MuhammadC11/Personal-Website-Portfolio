@@ -11,7 +11,7 @@
       >
     </div>
 
-    <button @click="scrollToAboutMe">About Me</button>
+    <button @click="scrollToAboutMe" id="about_button">About Me</button>
   </section>
 </template>
 
@@ -183,11 +183,33 @@ button {
   letter-spacing: 0.02em;
   background-color: rgba(176, 255, 160, 0.233);
   color: #fff;
-
   cursor: pointer;
   border-radius: 2.5px;
   user-select: none;
   transition: ease-in-out 0.15s all;
+}
+#about_button {
+  position: relative;
+  top: 30rem;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  background-color: #111927;
+  color: #fff;
+  cursor: pointer;
+  transition: ease-in-out 0.15s all;
+  border: 2px solid #fff;
+  outline: none;
+  user-select: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
+#about_button:hover {
+  background-color: rgba(237, 250, 227, 0.733);
+  color: #000;
 }
 
 button:hover {
