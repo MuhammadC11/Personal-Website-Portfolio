@@ -4,9 +4,9 @@
     <!-- add an image  -->
     <img src="../../public/portrait.jpg" alt="placeholder" class="image" />
     <p id="about_paragraph">
-      I am a second year Computer Science student at CUNY Hunter College. I am
-      passionate about software development and learning new technologies. I am
-      currently looking for a software engineering internship for Summer 2023.
+      I am a third year Computer Science student at SUNY Binghamton University.
+      I am passionate about software development and problem-solving. I am
+      currently looking for a software engineering internship for Summer 2025.
     </p>
   </section>
   <section id="activities"></section>

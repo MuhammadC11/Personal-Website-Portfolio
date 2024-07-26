@@ -368,7 +368,7 @@ body {
     top: 4rem;
   }
   .project-card {
-    width: 25rem;
+    width: 30rem;
   }
 
   .project-card__side {
