@@ -19,6 +19,14 @@
         >GitHub</a
       >
     </div>
+    <div>
+      <a
+        target="_blank"
+        class="gh_button"
+        href="https://www.linkedin.com/in/mc56/"
+        >LinkedIn</a
+      >
+    </div>
   </div>
 </template>
 
