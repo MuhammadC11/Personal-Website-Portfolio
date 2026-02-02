@@ -99,16 +99,6 @@ export default {
         },
         {
           id: 2,
-          title: "Swim Workouts",
-          description:
-            "We created this project during HackPrinceton Spring of 2023. We used Vue.js, Node.js, and Firebase to create a web application that generates swim workouts for users based on the user's input.",
-          link: "https://swimworkoutgenerator.netlify.app/",
-          technologies: ["Vue.js", "Node.js", "Firebase"],
-          image_url: "/swg.png",
-          route: "/swg",
-        },
-        {
-          id: 3,
           title: "Anchor",
           description:
             "Worked together in a team of 4 to create an extension geared towards productivity during a 36 hour hackathon. We utilized OpenAI's API to send requests based on user input to help students with their tasks.",
@@ -117,6 +107,17 @@ export default {
           image_url: "/anchor.jpg",
           route: "/anchor",
         },
+        {
+          id: 3,
+          title: "Swim Workouts",
+          description:
+            "We created this project during HackPrinceton Spring of 2023. We used Vue.js, Node.js, and Firebase to create a web application that generates swim workouts for users based on the user's input.",
+          link: "https://swimworkoutgenerator.netlify.app/",
+          technologies: ["Vue.js", "Node.js", "Firebase"],
+          image_url: "/swg.png",
+          route: "/swg",
+        },
+
         {
           id: 4,
           title: "Weather App",
