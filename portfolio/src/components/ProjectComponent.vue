@@ -17,19 +17,15 @@
 
           <div class="project-card__details">
             <ul>
-              <li
-                v-for="(tech, techIndex) in project.technologies"
-                :key="techIndex"
-              >
+              <li v-for="(tech, techIndex) in project.technologies" :key="techIndex">
                 {{ tech }}
               </li>
             </ul>
           </div>
           <h4 class="project-card__heading">
-            <span
-              class="project-card__heading-span project-card__heading-span--1"
-              >{{ project.title }}</span
-            >
+            <span class="project-card__heading-span project-card__heading-span--1">{{
+              project.title
+            }}</span>
           </h4>
         </div>
         <div
@@ -72,6 +68,23 @@ export default {
       projects: [
         {
           id: 1,
+          title: "Forkcast",
+          description:
+            "Forkcast is an app dedicated to users who have trouble finding something to make everyday. Users can search for recipes based on ingredients they have, track the macros of what they're eating and share their recipes with other users",
+          link: "https://github.com/MuhammadC11/Forkcast",
+          technologies: [
+            "NodeJS",
+            "PostgreSQL",
+            "React",
+            "Express.js",
+            "Spoonacular API",
+            "MealDb API",
+          ],
+          image_url: "/forkcast.png",
+          route: "/pillpal",
+        },
+        {
+          id: 2,
           title: "PillPal",
           description:
             "PillPal is an app dedicated to users who have trouble understanding their medications and need to keep track of their prescriptions. Users can upload a photo from their camera roll or take a picture of their prescription and PillPal will provide them with information about their medication.",
@@ -144,11 +157,7 @@ body {
   background-color: #111927;
 }
 .project_section {
-  background-image: radial-gradient(
-      at 47% 33%,
-      hsl(224.93, 97%, 46%) 0,
-      transparent 59%
-    ),
+  background-image: radial-gradient(at 47% 33%, hsl(224.93, 97%, 46%) 0, transparent 59%),
     radial-gradient(at 82% 65%, hsl(218, 39%, 11%) 0, transparent 55%);
 
   color: white;
