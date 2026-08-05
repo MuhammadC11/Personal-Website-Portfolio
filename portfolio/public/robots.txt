@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mchaudhry.netlify.app/sitemap.xml
