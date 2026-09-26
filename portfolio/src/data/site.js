@@ -7,7 +7,7 @@ export const profile = {
     "Problem Solver",
   ],
   tagline:
-    "I build data pipelines, AI tools, and web apps. Lately I've been making sure the numbers a leadership team looks at are ones they can check.",
+    "I build data pipelines, AI tools, and web apps. I love turning ideas into working software, and I love learning new technologies to do it.",
   availability: "Open to full-time software, AI, and data engineering roles",
   email: "chaudhrysayyam85@gmail.com",
   github: "https://github.com/MuhammadC11",
@@ -34,7 +34,7 @@ export const experience = [
     id: "sailpoint",
     company: "SailPoint",
     role: "AI Data Engineering Intern",
-    period: "May 2026 — Present",
+    period: "May 2026 — August 2026",
     current: true,
     summary:
       "I build the tools that tell leadership what our AI agents cost and who is using them.",
@@ -62,7 +62,7 @@ export const experience = [
     summary:
       "Shipped accounting and inventory features on a platform a few thousand businesses run their books on.",
     highlights: [
-      "Designed and deployed 12+ core feature sets for an accounting platform serving 2,000+ customers, including a supplier management module and \"discontinued\" item tracking that preserves historical data integrity.",
+      'Designed and deployed 12+ core feature sets for an accounting platform serving 2,000+ customers, including a supplier management module and "discontinued" item tracking that preserves historical data integrity.',
       "Refactored profit calculation logic to resolve discrepancies across 15,000+ historical entries, reaching full financial accuracy by implementing FIFO batch-sales logic and adding summary financial reports.",
       "Engineered an automated stock synchronization system and return-item workflow that keeps inventory levels and true profit margins accurate in real time.",
     ],
@@ -91,11 +91,26 @@ export const skillGroups = [
   },
   {
     label: "AI & Data",
-    items: ["Google Gemini", "Google ADK", "BigQuery", "Looker", "Google Cloud"],
+    items: [
+      "Google Gemini",
+      "Google ADK",
+      "BigQuery",
+      "Looker",
+      "Google Cloud",
+    ],
   },
   {
     label: "Web",
-    items: ["React", "Vue", "Node.js", "Express", "PostgreSQL", "MongoDB", "Firebase", "REST"],
+    items: [
+      "React",
+      "Vue",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "MongoDB",
+      "Firebase",
+      "REST",
+    ],
   },
   {
     label: "Tooling",
@@ -120,7 +135,13 @@ export const projects = [
     title: "PillPal",
     description:
       "Built at SBUHacks after watching older relatives struggle with prescription labels they couldn't read. Take a photo, Google Cloud Vision pulls the text off the label, and the app reads the instructions back to you in your own language. Big icons, 10+ languages, no small print.",
-    tech: ["React Native", "MongoDB", "Express", "Google Cloud Vision", "OpenAI"],
+    tech: [
+      "React Native",
+      "MongoDB",
+      "Express",
+      "Google Cloud Vision",
+      "OpenAI",
+    ],
     image: "/pillpal.webp",
     links: { code: "https://github.com/MuhammadC11/PillPal-SBUHacks-24" },
     year: "2024",

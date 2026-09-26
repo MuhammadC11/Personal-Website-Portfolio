@@ -33,37 +33,40 @@
 
         <div class="about__body">
           <p class="about__lead reveal">
-            I studied Computer Science at Binghamton, and right now I'm an AI Data
-            Engineering Intern at SailPoint.
+            I studied Computer Science at Binghamton, and right now I'm an AI
+            Data Engineering Intern at SailPoint.
           </p>
 
           <p class="about__text reveal" style="--reveal-delay: 80ms">
-            My favorite problems are the ones where the data is a mess and someone still
-            needs a straight answer. At SailPoint that means building the pipelines and
-            the assistant on top of them, so leadership can ask what our AI agents cost
-            and get a number they can <em>go verify themselves</em>. I spend a lot of
-            time on that last part. A dashboard that's quietly off by a few percent is
-            worse than no dashboard at all.
+            My favorite problems are the ones where I have to dig deep into a
+            codebase and figure out how things work and then come up with a
+            solution. At SailPoint that means building the pipelines and the
+            assistant on top of them, so leadership can ask what our AI agents
+            cost and get a number they can <em>go verify themselves</em>.
           </p>
 
           <p class="about__text reveal" style="--reveal-delay: 160ms">
-            Before that I worked on an accounting platform that a few thousand
-            businesses run their books on. I rewrote the profit logic after we found it
-            had been wrong across 15,000 old entries, which was a long week and a good
-            lesson. Most of my side projects started the same way: I wanted something
-            that didn't exist yet. PillPal came from watching relatives squint at
-            prescription labels they couldn't read.
+            Before that I worked on an accounting platform that had thousands of
+            previous customer data. I rewrote the profit logic after we found it
+            had been wrong across 15,000 old entries, which was a long week and
+            a good lesson. Most of my side projects started the same way: I
+            wanted something that didn't exist yet. PillPal came from watching
+            relatives squint at prescription labels they couldn't read.
           </p>
 
           <p class="about__text reveal" style="--reveal-delay: 200ms">
-            Outside of work you'll find me at the gym, playing Valorant, or taking my
-            time with story games like God of War and The Last of Us. I watch a lot of
-            K-dramas and anime. I also built my own PC recently and still open the case
-            for no real reason.
+            Outside of work you'll find me at the gym, playing Valorant, or
+            taking my time with story games like God of War and Tomb Raider. I
+            watch a lot of K-dramas and anime. I also built my own PC recently
+            before the GPU crisis.
           </p>
 
           <ul class="about__course reveal" style="--reveal-delay: 240ms">
-            <li v-for="course in education.coursework" :key="course" class="chip">
+            <li
+              v-for="course in education.coursework"
+              :key="course"
+              class="chip"
+            >
               {{ course }}
             </li>
           </ul>
@@ -109,7 +112,11 @@ import { education, profile } from "../data/site";
   border-radius: var(--radius-lg);
   overflow: hidden;
   border: 1px solid var(--border);
-  background: linear-gradient(135deg, rgba(91, 156, 255, 0.16), rgba(168, 121, 255, 0.1));
+  background: linear-gradient(
+    135deg,
+    rgba(91, 156, 255, 0.16),
+    rgba(168, 121, 255, 0.1)
+  );
   box-shadow: var(--shadow-lg);
 }
 
